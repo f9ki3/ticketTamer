@@ -1,92 +1,53 @@
 <?php
-// Start a session
-session_start();
+include '../config/config.php'; // Include the file containing database connection details
 
-// Include database configuration
-include("../config/config.php");
+// Check if POST request
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Check if username and password are set
+    if (isset($_POST["username"]) && isset($_POST["password"])) {
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $password = hash('sha256', $password);
 
-// Check if the POST data is set
-if (isset($_POST['uname'], $_POST['pass'])) {
-    // Get the posted username and password
-    $username = $_POST['uname'];
-    $password = hash('sha256', $_POST['pass']); // Hash the password
+        // Prepare and execute the query
+        $stmt = $conn->prepare("SELECT * FROM users WHERE user_name = ? AND user_password = ?");
+        $stmt->bind_param("ss", $username, $password);
+        $stmt->execute();
+        $result = $stmt->get_result();
 
-    // Prepare a SQL statement to check if the username and password exist
-    $sql = "SELECT * FROM users WHERE (user_name = ? OR user_email = ?) AND user_password = ? AND user_status = ?";
-    $stmt = $conn->prepare($sql);
+        // Check if any rows were returned
+        if ($result->num_rows == 1) {
+            // Start a session
+            session_start();
 
-    if ($stmt === false) {
-        // Handle error, perhaps by logging it or showing a message to the user
-        die('Error: ' . htmlspecialchars($conn->error));
-    }
+            // Fetch user data and store in session variables
+            $user = $result->fetch_assoc();
+            $_SESSION['loggedin'] = true;
+            $_SESSION['user_name'] = $user['user_name'];
+            $_SESSION['id'] = $user['id'];
+            $_SESSION['user_fname'] = $user['user_fname'];
+            $_SESSION['user_lname'] = $user['user_lname'];
+            $_SESSION['user_email'] = $user['user_email'];
+            $_SESSION['user_contact'] = $user['user_contact'];
+            $_SESSION['user_address'] = $user['user_address'];
+            $_SESSION['user_profile'] = $user['user_profile'];
+            $_SESSION['user_type'] = $user['user_type'];
 
-    // Bind parameters
-    $status = 0; // Assuming user_status is an integer (changed to 1 for active users)
-    $stmt->bind_param("sssi", $username, $username, $password, $status);
-
-    // Execute the statement
-    $stmt->execute();
-
-    // Get the result
-    $result = $stmt->get_result();
-
-    // Check if a row was returned
-    if ($result->num_rows > 0) {
-        // Fetch the user data
-        $row = $result->fetch_assoc();
-
-        // Set session variables
-        $_SESSION['id'] = $row['id'];
-        $_SESSION['user_fname'] = $row['user_fname'];
-        $_SESSION['user_lname'] = $row['user_lname'];
-        $_SESSION['user_email'] = $row['user_email'];
-        $_SESSION['user_contact'] = $row['user_contact'];
-        $_SESSION['user_address'] = $row['user_address'];
-        $_SESSION['user_profile'] = $row['user_profile'];
-        $_SESSION['user_name'] = $username;
-        $_SESSION['user_type'] = $row['user_type'];
-        $_SESSION['user_property_id'] = $row['user_property_id'];
-        $_SESSION['loggedin'] = true;
-
-        // Check user type
-        if ($row['user_type'] == 0) {
-            // Respond with '1' to indicate successful login for user type 0
-            echo '1';
-        } elseif ($row['user_type'] == 1) {
-            if ($row['user_started'] == 1) {
-                echo '6'; // Successful login for user type 2 with OTP verified
-            } else {
-                echo '2'; // Successful login for user type 2, but OTP not verified
-            }
-        } elseif ($row['user_type'] == 2) {
-            // Respond based on OTP status (assuming OTP status is a separate verification step)
-            if ($row['user_otp_status'] == 1) {
-                if ($row['user_started'] == 1) {
-                    echo '7'; // Successful login for user type 2 with OTP verified
-                } else {
-                    echo '3'; // Successful login for user type 2, but OTP not verified
-                }
-            } else {
-                echo '4'; // Successful login for user type 2, but OTP not verified
-            }
+            echo "1";
         } else {
-            // Respond with '0' for unknown user type
-            echo '0';
+            // Return failure message
+            echo "0";
         }
+
+        // Close the statement and database connection
+        $stmt->close();
+        $conn->close();
     } else {
-        // Respond with '0' to indicate failed login
-        echo '0';
+        // Return failure message if username or password is not set
+        echo "0";
     }
-
-    // Close the result set
-    $result->close();
-    // Close the statement
-    $stmt->close();
 } else {
-    // Respond with '0' to indicate failed login
-    echo '0';
+    // Return failure message if not a POST request
+    echo "Only POST requests are allowed!";
 }
-
-// Close the connection
-$conn->close();
 ?>
