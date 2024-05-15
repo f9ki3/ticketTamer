@@ -3,9 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Tamer</title>
-    <link rel="stylesheet" href="library/boostrap/node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="library/boostrap_icons/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="assets/css/loader.css">
+    <?php include 'config/header_links.php'?>
 </head>
 <body>
     <div class="container">
@@ -37,9 +35,6 @@
         </div>
 
     </div>
-
-    <script src="library/jquery/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="library/boostrap/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="javascript/loader_hide.js"></script>
+    <?php include 'config/header_links.php'?>
 </body>
 </html>
