@@ -35,7 +35,6 @@
                         <p>Select Parking Type</p>
                         <select name="vehicle" id="vehicle" class="form-control">
                         </select>
-
                         <a href="generate_ticket" class="btn btn-danger w-100 mt-3">Generate</a>
                         <button id="resetBtn" class="btn border-danger text-danger w-100 mt-3 mb-4">Reset</button>
                     </div>

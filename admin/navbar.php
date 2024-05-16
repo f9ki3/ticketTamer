@@ -10,13 +10,13 @@
         <h5 class="fw-bolder">Menus</h5>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="index" ><i class="bi me-2 bi-activity"></i> Dashboard</a></li>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="generate_ticket" ><i class="bi me-2 bi-ticket-perforated"></i> Generate Ticket</a></li>
-        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i class="bi me-2 bi-file-break"></i> Transaction</a></li>
-        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i class="bi me-2 bi-bar-chart-steps"></i> User Logs</a></li>
-        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i class="bi me-2 bi-people"></i> Accounts</a></li>
+        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="transaction" ><i class="bi me-2 bi-file-break"></i> Transaction</a></li>
+        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="user_logs" ><i class="bi me-2 bi-bar-chart-steps"></i> User Logs</a></li>
+        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="accounts" ><i class="bi me-2 bi-people"></i> Accounts</a></li>
     </div>
     <div>
         <h5 class="fw-bolder mt-3">Settings</h5>
-        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i class="bi me-2 bi-person"></i> Profile</a></li>
+        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="profile" ><i class="bi me-2 bi-person"></i> Profile</a></li>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="maintenance" ><i <i class="bi me-2 bi-rocket-takeoff"></i> Maintenance</a></li>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="logout" ><i class="bi me-2 bi-power"></i> Logout</a></li>
     </div>
