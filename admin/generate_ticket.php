@@ -31,22 +31,20 @@
                         <p>Time-Out</p>
                         <input id="timeOut" class="form-control mb-3" type="datetime-local">
                         <p>Select Parking Type</p>
-                        <select name="" id="" class="form-control">
-                            <option value="">Motorcycle</option>
-                            <option value="">Tricycle</option>
-                            <option value="">Van</option>
-                            <option value="">Sedan</option>
-                            <option value="">Pickup</option>
+                        <select name="vehicle" id="vehicle" class="form-control">
+                            <option value="">Select Vehicle</option>
                         </select>
-                        <button class="btn btn-danger w-100 mt-3" disabled>Generate</button>
-                        <button class="btn border-danger text-danger w-100 mt-3 mb-4" disabled>Reset</button>
+
+                        <button class="btn btn-danger w-100 mt-3">Generate</button>
+                        <button class="btn border-danger text-danger w-100 mt-3 mb-4">Reset</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="row">
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
                             <h5 class="fw-bolder ms-3">Summary</h5>
-                            <h1 class="ms-3">PHP 1,000.00</h1>
+                            <h1 class="ms-3">PHP 0.00</h1>
+                            <p class="ms-3">Number of Hours: 18 Rate: 50.00</p>
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
@@ -57,6 +55,7 @@
                         <div class="d-flex justify-content-between">
                             <div>
                                 <p class="ms-3 m-0 fw-bolder">Bulacan State University</p>
+                                <p class="ms-3 m-0">Malolos, Bulacan</p>
                                 <p class="ms-3 m-0">bsu@gmail.com</p>
                                 <p class="ms-3 m-0">+63 (93) 696 6612</p>
                             </div>
@@ -67,13 +66,19 @@
                             </div>
                         </div>
                         <hr>
-                        <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
-                        <p class="ms-3 m-0">From: </p>
-                        <p class="ms-3 m-0">To: </p>
-                        <p class="ms-3 m-0">Number of Hours: </p>
-                        <p class="ms-3 m-0">Hours Rate: </p>
-                        <hr>
-                        <p class="ms-3 m-0 fw-bolder">Total: PHP 1,000.00</p>
+                        <div class="d-flex flex-row">
+                            <div class="w-50">
+                                <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
+                                <p class="ms-3 m-0">From: </p>
+                                <p class="ms-3 m-0">To: </p>
+                                <p class="ms-3 m-0">Number of Hours: </p>
+                                <p class="ms-3 m-0">Hours Rate: </p>
+                                <p class="ms-3 m-0 mb-5">Total: PHP 1,000.00</p>
+                            </div>
+                            <div class="w-50 ps-5">
+                                <img style="width: 120px" class="ms-2 mt-3" src="../uploads/qrcode.png" alt="">
+                            </div>
+                        </div>
                         
                     </div>
                     </div>

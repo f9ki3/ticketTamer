@@ -17,7 +17,7 @@
     <div>
         <h5 class="fw-bolder mt-3">Settings</h5>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i class="bi me-2 bi-person"></i> Profile</a></li>
-        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="#" ><i <i class="bi me-2 bi-rocket-takeoff"></i> Maintenance</a></li>
+        <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="maintenance" ><i <i class="bi me-2 bi-rocket-takeoff"></i> Maintenance</a></li>
         <li style="text-decoration: none; list-style: none; padding-top: 10px"><a class="text-decoration-none text-dark" href="logout" ><i class="bi me-2 bi-power"></i> Logout</a></li>
     </div>
 
