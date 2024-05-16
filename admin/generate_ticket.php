@@ -50,10 +50,10 @@
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
-                        <h3 class="ms-3">PARKING RECEIPT</h3>
+                        <h3 class="ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> PARKING RECEIPT</h3>
                         <hr>
-                        <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
-                        <hr>
+                        <!-- <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
+                        <hr> -->
                         <div class="d-flex justify-content-between">
                             <div>
                                 <p class="ms-3 m-0 fw-bolder">Bulacan State University</p>
@@ -63,7 +63,7 @@
                             <div>
                                 <p class="me-3 m-0 fw-bolder">Ticket No: TMR10001</p>
                                 <p class="me-3 m-0">Date: 05/16/24</p>
-                                <p class="me-3 m-0">+63 (93) 696 6612</p>
+                                <!-- <p class="me-3 m-0">+63 (93) 696 6612</p> -->
                             </div>
                         </div>
                         <hr>
