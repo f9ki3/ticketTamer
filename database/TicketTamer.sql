@@ -118,7 +118,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `user_name`, `user_email`, `user_password`, `user_fname`, `user_lname`, `user_contact`, `user_address`, `user_profile`, `user_type`, `user_property_id`, `user_status`, `user_started`, `user_otp_status`) VALUES
-(1, 'fyke_123', 'floterina@gmail.com', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'Fyke', 'Lleva', '09120912091', 'Barangay Pinagpala, Loyal St. ', 'profile.jpg', 0, 0, 0, 0, 1);
+(1, 'papik_123', 'papik@gmail.com', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3', 'Papik', 'Filipo', '09120912091', 'Barangay Pinagpala, Loyal St. ', 'profile.jpg', 0, 0, 0, 0, 1);
 
 --
 -- Indexes for dumped tables

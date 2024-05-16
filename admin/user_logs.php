@@ -29,7 +29,6 @@
                        <p><i <i class="bi me-2 bi-rocket-takeoff"></i> Page not found</p>
                         
                     </div>
-               
             </div>
 
         </div>
