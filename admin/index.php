@@ -8,42 +8,73 @@
 </head>
 <body>
     <div class="container">
-        <div id="loader" style="height: 100%; width: 100%; display: flex" class="justify-content-center align-items-center">
+        <!-- <div id="loader" style="height: 100%; width: 100%; display: flex" class="justify-content-center align-items-center">
             <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
                 <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
                 <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
             </svg>
-        </div>
-        <div id="login-div" class="row " style="display: none">
-            <div class="col-12 col-md-4 pt-5 ">
-                    <form id="login_form">
-                        <div class="p-5 w-100 border shadow rounded rounded-4 mt-5" style="height: 550px">
-                            <h3 class="fw-bolder mt-5"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h3>
-                            <hr>
-                            <p>Username</p>
-                            <input id="username" type="text" class="form-control" placeholder="Enter your Username">
-                            <p class="mt-3">Password</p>
-                            <input id="password" type="password" class="form-control" placeholder="Enter your password">
-                            
-                            <button type="submit" id="loading" class="mt-3 rounded rounded-3  btn btn-danger w-100 disabled" style="display: none">
-                                <div class="spinner-grow spinner-grow-sm m-1" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </button>
-                            <button type="submit" id="login_btn"  class="btn mt-3 rounded rounded-3 btn-danger w-100">Login</button>
-                            <div class="alert mt-3 alert-danger text-center error" role="alert" style="display: none">
-                                Please check your login Credentials
+        </div> -->
+
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <?php include 'navbar.php'?>
+            </div>
+            <div class="col-12 col-md-10 p-5">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: 170px">
+                            <h5>Today Sales </h5>
+                            <h2 class="fw-bolder">PHP 10,00.00 </h2>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: 170px">
+                        <div class="d-flex flex-row justify-centent-center align-items-center">
+                            <div style="width: 90px; height: 90px">
+                                <img style="object-fit; width: 100%; height: 100%; border-radius: 100%" src="../uploads/<?php echo $profile?>" alt="profile">
+                            </div>
+                            <div class="ps-3">
+                                <h5>Cashier </h5>
+                                <h3 class="fw-bolder"><?php echo $fname, ' ', $lname;?></h3>
+                            </div>
+                            <div class="ps-4 ms-5 border-start">
+                                <h5>100 </h5>
+                                <h5 class="fw-bolder">Today</h5>
+                            </div>
+                            <div class="ps-3 ms-3">
+                                <h5>100 </h5>
+                                <h5 class="fw-bolder">Monthly</h5>
+                            </div>
+                            <div class="ps-3 ms-3">
+                                <h5>100 </h5>
+                                <h5 class="fw-bolder">Annual</h5>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </div>
+               </div>
+
+               <div class="row">
+                <div class="col-12 col-md-6">
+                        <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
+                            <h5 class="fw-bolder ms-3">Daily Sales</h5>
+                            <div id="chart">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
+                            <h5 class="fw-bolder ms-3">Parking Type</h5>
+                            <div id="pie"></div>
+                        </div>
+                    </div>
+               </div>
+               
             </div>
-            <div class="col-12 col-md-8" style="padding-top: 150px; padding-left: 70px">
-                <h1 class="fw-bolder" style="font-size: 50px">Tame Your Parking Hassles!</h1>
-                <h1 class="fw-bolder" style="font-size: 50px">with Ticket Tamer!</h1>
-                <img src="assets/img/robot.jpg" alt="" style="width: 500px; height: auto">
-            </div>
+
         </div>
 
     </div>
