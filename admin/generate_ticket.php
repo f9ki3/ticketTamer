@@ -50,7 +50,22 @@
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
-                        <h5 class="fw-bolder ms-3">Ticket</h5>
+                        <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
+                        <hr>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <p class="ms-3 m-0 fw-bolder">Bulacan State University</p>
+                                <p class="ms-3 m-0">bsu@gmail.com</p>
+                                <p class="ms-3 m-0">+63 (93) 696 6612</p>
+                            </div>
+                            <div>
+                                <p class="me-3 m-0 fw-bolder">Ticket No: TMR10001</p>
+                                <p class="me-3 m-0">Date: 05/16/24</p>
+                                <p class="me-3 m-0">+63 (93) 696 6612</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
                         
                     </div>
                     </div>
