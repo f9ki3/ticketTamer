@@ -30,12 +30,29 @@
                         <input id="timeIn" class="form-control mb-3" type="datetime-local">
                         <p>Time-Out</p>
                         <input id="timeOut" class="form-control mb-3" type="datetime-local">
+                        <p>Select Parking Type</p>
+                        <select name="" id="" class="form-control">
+                            <option value="">Motorcycle</option>
+                            <option value="">Tricycle</option>
+                            <option value="">Van</option>
+                            <option value="">Sedan</option>
+                            <option value="">Pickup</option>
+                        </select>
+                        <button class="btn btn-danger w-100 mt-3" disabled>Generate</button>
+                        <button class="btn border-danger text-danger w-100 mt-3 mb-4" disabled>Reset</button>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
+                    <div class="row">
+                        <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
+                            <h5 class="fw-bolder ms-3">Summary</h5>
+                            <h1 class="ms-3">PHP 1,000.00</h1>
+                            
+                        </div>
+                        <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
                         <h5 class="fw-bolder ms-3">Ticket</h5>
                         
+                    </div>
                     </div>
                 </div>
             </div>
