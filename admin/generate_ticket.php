@@ -26,15 +26,17 @@
                 <div class="col-12 col-md-6">
                     <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
                         <h5 class="fw-bolder mb-3">Generate Ticket</h5>
+                        <p>Plate No.</p>
+                        <input id="plate_no" class="form-control mb-3" type="text" placeholder="Enter plate no.">
                         <p>Time-In</p>
-                        <input id="timeIn" class="form-control mb-3" type="datetime-local">
+                        <input id="timeIn" class="form-control mb-3" type="datetime-local" readonly>
                         <p>Time-Out</p>
                         <input id="timeOut" class="form-control mb-3" type="datetime-local">
                         <p>Select Parking Type</p>
                         <select name="vehicle" id="vehicle" class="form-control">
                         </select>
 
-                        <button id="generateBtn" class="btn btn-danger w-100 mt-3">Generate</button>
+                        <a href="generate_ticket" class="btn btn-danger w-100 mt-3">Generate</a>
                         <button id="resetBtn" class="btn border-danger text-danger w-100 mt-3 mb-4">Reset</button>
                     </div>
                 </div>
@@ -42,8 +44,8 @@
                     <div class="row">
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
                             <h5 class="fw-bolder ms-3">Summary</h5>
-                            <h1 class="ms-3">PHP 0.00</h1>
-                            <p class="ms-3">Number of Hours: 0 Rate: 0.00</p>
+                            <h1 class="ms-3" id="total_amount">PHP 0.00</h1>
+                            <p class="ms-3" id="details">Number of Hours: 0 Rate: 0.00</p>
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">

@@ -5,9 +5,10 @@ $(document).ready(function() {
         type: 'GET',
         dataType: 'json',
         success: function(data) {
+            console.log(data);
             // Loop through the returned data and append it to the select dropdown
             $.each(data, function(index, vehicle) {
-                $('#vehicle').append('<option value="' + vehicle.parking_rate + '">' + vehicle.parking_name + '</option>');
+                $('#vehicle').append('<option value="' + vehicle.parking_rate + ',' + vehicle.p_id +'">' + vehicle.parking_name +'</option>');
             });
         },
         error: function(xhr, status, error) {

@@ -12,17 +12,9 @@ $qrCode = QrCode::create($text)
     ->setSize(300) // Size of the QR code
     ->setMargin(10); // Margin around the QR code
 
-// Define the directory path for saving the QR code image
-$directory = __DIR__ . '/../uploads/';
-
-// Create the directory if it doesn't exist
-if (!is_dir($directory)) {
-    mkdir($directory, 0777, true);
-}
-
 // Create a writer and save the QR code to a file
 $writer = new PngWriter();
-$writer->write($qrCode)->saveToFile($directory . 'qrcode.png');
+$writer->write($qrCode)->saveToFile(__DIR__ . '../uploads/qrcode.png');
 
 // Display the QR code as an image
 header('Content-Type: '.$qrCode->getMimeTypePart());
