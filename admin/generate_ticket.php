@@ -50,6 +50,8 @@
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
+                        <h3 class="ms-3">PARKING RECEIPT</h3>
+                        <hr>
                         <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
                         <hr>
                         <div class="d-flex justify-content-between">
