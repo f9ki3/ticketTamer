@@ -8,5 +8,6 @@
     <script src="../javascript/sales_parking_type.js"></script>
     <script src="../javascript/set_today_time.js"></script>
     <script src="../javascript/parking.js"></script>
+    <script src="../javascript/generate.js"></script>
 
     
