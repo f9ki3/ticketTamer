@@ -6,4 +6,5 @@
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <script src="../javascript/daily_sales_charts.js"></script>
     <script src="../javascript/sales_parking_type.js"></script>
+    <script src="../javascript/set_today_time.js"></script>
     

@@ -27,20 +27,18 @@ $(document).ready(function() {
                     $('#loading').hide();
                     $('#login_btn').show();
 
-                        // Hide the loader
+                    if (response === "1") {
                         $("#loader").show();
-                        
                         // Show the login-div
                         $("#login-div").hide();
-                    setTimeout(function() {
-                
-                        // console.log('reload')
-                        if (response === "1") {
+                        // Hide the loader
+                        setTimeout(function() {
                             window.location.href = 'admin/';
-                        } else {
-                            $('.error').show();
-                        }
-                    }, 3000);
+                        }, 3000);
+
+                    } else {
+                        $('.error').show();
+                    }
                     
                 },
                 error: function() {
