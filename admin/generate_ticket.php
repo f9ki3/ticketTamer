@@ -63,11 +63,17 @@
                             <div>
                                 <p class="me-3 m-0 fw-bolder">Ticket No: TMR10001</p>
                                 <p class="me-3 m-0">Date: 05/16/24</p>
-                                <!-- <p class="me-3 m-0">+63 (93) 696 6612</p> -->
+                                <p class="me-3 m-0">Type: Motorcycle</p>
                             </div>
                         </div>
                         <hr>
                         <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
+                        <p class="ms-3 m-0">From: </p>
+                        <p class="ms-3 m-0">To: </p>
+                        <p class="ms-3 m-0">Number of Hours: </p>
+                        <p class="ms-3 m-0">Hours Rate: </p>
+                        <hr>
+                        <p class="ms-3 m-0 fw-bolder">Total: PHP 1,000.00</p>
                         
                     </div>
                     </div>
