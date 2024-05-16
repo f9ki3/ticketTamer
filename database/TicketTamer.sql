@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 16, 2024 at 10:14 AM
+-- Host: 127.0.0.1
+-- Generation Time: May 16, 2024 at 12:12 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `TicketTamer`
+-- Database: `tickettamer`
 --
 
 -- --------------------------------------------------------
@@ -43,8 +43,10 @@ CREATE TABLE `discount` (
 CREATE TABLE `maintenance` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL,
-  `maintenance_name` varchar(100) NOT NULL,
-  `maintenance_description` varchar(255) NOT NULL
+  `company_name` varchar(100) NOT NULL,
+  `address` varchar(500) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `contact` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
@@ -57,8 +59,19 @@ CREATE TABLE `parking_type` (
   `id` int(11) NOT NULL,
   `date` datetime NOT NULL,
   `parking_name` varchar(100) NOT NULL,
-  `parking_rate` datetime NOT NULL
+  `parking_rate` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `parking_type`
+--
+
+INSERT INTO `parking_type` (`id`, `date`, `parking_name`, `parking_rate`) VALUES
+(1, '2024-05-16 10:59:44', 'Motorcycle', 20),
+(2, '2024-05-16 11:00:21', 'Tricycle', 30),
+(3, '2024-05-16 11:00:21', 'Van', 50),
+(4, '2024-05-16 11:00:43', 'Sedan', 50),
+(5, '2024-05-16 11:00:43', 'Pickup', 60);
 
 -- --------------------------------------------------------
 
@@ -68,6 +81,7 @@ CREATE TABLE `parking_type` (
 
 CREATE TABLE `transaction` (
   `id` int(11) NOT NULL,
+  `ticket_date` datetime NOT NULL,
   `ticket_date_start` datetime NOT NULL,
   `ticket_date_end` datetime NOT NULL,
   `ticket_no_hours` int(7) NOT NULL,
@@ -123,6 +137,12 @@ ALTER TABLE `maintenance`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `parking_type`
+--
+ALTER TABLE `parking_type`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `transaction`
 --
 ALTER TABLE `transaction`
@@ -151,6 +171,12 @@ ALTER TABLE `discount`
 --
 ALTER TABLE `maintenance`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `parking_type`
+--
+ALTER TABLE `parking_type`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `transaction`
