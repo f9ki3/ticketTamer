@@ -49,39 +49,42 @@
                             
                         </div>
                         <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: auto">
-                        <h3 class="ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> PARKING RECEIPT</h3>
-                        <hr>
-                        <!-- <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
-                        <hr> -->
-                        <div class="d-flex justify-content-between">
+                            <h3 class="ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> PARKING RECEIPT</h3>
+                            <hr>
+
+                            <!-- <h5 class="fw-bolder ms-3"><i class="bi me-2 bi-ticket-perforated-fill"></i> Ticket Tamer</h5>
+                            <hr> -->
                             <div>
-                                <p class="ms-3 m-0 fw-bolder">Bulacan State University</p>
-                                <p class="ms-3 m-0">Malolos, Bulacan</p>
-                                <p class="ms-3 m-0">bsu@gmail.com</p>
-                                <p class="ms-3 m-0">+63 (93) 696 6612</p>
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        <p class="ms-3 m-0 fw-bolder">Bulacan State University</p>
+                                        <p class="ms-3 m-0">Malolos, Bulacan</p>
+                                        <p class="ms-3 m-0">bsu@gmail.com</p>
+                                        <p class="ms-3 m-0">+63 (93) 696 6612</p>
+                                    </div>
+                                    <div>
+                                        <p class="me-3 m-0 fw-bolder">Ticket No: TMR10001</p>
+                                        <p class="me-3 m-0">Date: 05/16/24</p>
+                                        <p class="me-3 m-0">Type: Motorcycle</p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex flex-row">
+                                    <div class="w-50">
+                                        <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
+                                        <p class="ms-3 m-0">From: </p>
+                                        <p class="ms-3 m-0">To: </p>
+                                        <p class="ms-3 m-0">Number of Hours: </p>
+                                        <p class="ms-3 m-0">Hours Rate: </p>
+                                        <p class="ms-3 m-0 mb-5">Total: PHP 1,000.00</p>
+                                    </div>
+                                    <div class="w-50 ps-5">
+                                        <img style="width: 120px" class="ms-2 mt-3" src="../uploads/qrcode.png" alt="">
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                <p class="me-3 m-0 fw-bolder">Ticket No: TMR10001</p>
-                                <p class="me-3 m-0">Date: 05/16/24</p>
-                                <p class="me-3 m-0">Type: Motorcycle</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="d-flex flex-row">
-                            <div class="w-50">
-                                <p class="ms-3 m-0 fw-bolder">Transaction Details</p>
-                                <p class="ms-3 m-0">From: </p>
-                                <p class="ms-3 m-0">To: </p>
-                                <p class="ms-3 m-0">Number of Hours: </p>
-                                <p class="ms-3 m-0">Hours Rate: </p>
-                                <p class="ms-3 m-0 mb-5">Total: PHP 1,000.00</p>
-                            </div>
-                            <div class="w-50 ps-5">
-                                <img style="width: 120px" class="ms-2 mt-3" src="../uploads/qrcode.png" alt="">
-                            </div>
-                        </div>
                         
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
