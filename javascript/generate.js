@@ -17,20 +17,20 @@ $(document).ready(function() {
         // Calculate the time difference in milliseconds
         var timeDiff = timeOutObj - timeInObj;
 
-        // Convert milliseconds to hours
-        var hours = timeDiff / (1000 * 60 * 60);
+        // Convert milliseconds to hours and round down to the nearest whole number
+        var hours = Math.floor(timeDiff / (1000 * 60 * 60));
 
-        var total_bill = rate * hours.toFixed(2);
+        var total_bill = rate * hours;
         // Display the total hours
         console.log("Plate No:", plate_no);
         console.log("Vehicle Type Id:", vehicle_id);
         console.log("In:", timeIn);
         console.log("Out:", timeOut);
-        console.log("Hours", hours); 
-        console.log("Rate", rate); 
+        console.log("Hours:", hours);
+        console.log("Rate:", rate);
         console.log("Total:", total_bill); 
         
-        // populate the summary
+        // Populate the summary
         total_bill = parseFloat(total_bill).toFixed(2); // Convert to float and format to 2 decimal places
         total_bill = 'PHP ' + total_bill; // Add PHP currency symbol
 
@@ -42,14 +42,4 @@ $(document).ready(function() {
 
     // Attach input event handlers to the input fields
     $("#plate_no, #timeIn, #timeOut, #vehicle").on('input', updateValues);
-
-    // Reset button click event handler
-    $("#resetBtn").click(function() {
-        // Reset the input fields
-        $("#plate_no").val("");
-        $("#timeIn").val("");
-        $("#timeOut").val("");
-        $("#total_amount").text("PHP 0.00");
-        $("#details").text("Number of Hours: 0 Rate: 0.00");
-    });
 });

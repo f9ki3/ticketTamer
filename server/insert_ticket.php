@@ -4,8 +4,10 @@ include '../config/config.php';
 
 // Check if the request method is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve POST data
-    $transaction_code = 1212;
+    // Generate a 5-digit random number
+    $random_number = rand(10000, 99999);
+    // Concatenate "TMR" with the random number
+    $transaction_code = "TMR" . $random_number;
     $ticket_date = date("Y-m-d H:i:s"); // Use the current date and time
     $ticket_plate_no = $_POST['plate_no'];
     $ticket_date_start = $_POST['time_in'];
@@ -17,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare and bind the SQL statement
     $stmt = $conn->prepare("INSERT INTO `transaction` (`transaction_code`, `ticket_date`, `ticket_plate_no`, `ticket_date_start`, `ticket_date_end`, `ticket_no_hours`, `ticket_rate`, `ticket_total_amount`, `ticket_qr_code`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("issssssss", $transaction_code, $ticket_date, $ticket_plate_no, $ticket_date_start, $ticket_date_end, $ticket_no_hours, $ticket_rate, $ticket_total_amount, $ticket_qr_code);
+    $stmt->bind_param("sssssssss", $transaction_code, $ticket_date, $ticket_plate_no, $ticket_date_start, $ticket_date_end, $ticket_no_hours, $ticket_rate, $ticket_total_amount, $ticket_qr_code);
 
     // Execute the statement
     if ($stmt->execute()) {
