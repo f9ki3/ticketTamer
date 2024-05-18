@@ -21,7 +21,7 @@ $(document).ready(function() {
             // If timeIn and timeOut are equal, disable the generate button
             $generateBtn.prop('disabled', true);
         } else {
-            // Otherwise, enable the generate button if timeOut is greater than timeIn
+            // Otherwise, enable the generate button if timeOut is greater than or equal to timeIn
             $generateBtn.prop('disabled', !isTimeOutGreater());
         }
     }

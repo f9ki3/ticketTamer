@@ -40,16 +40,12 @@
                                 <h3 class="fw-bolder"><?php echo $fname, ' ', $lname;?></h3>
                             </div>
                             <div class="ps-4 ms-5 border-start">
-                                <h5 id="today_sales">0.00 </h5>
-                                <h5 class="fw-bolder">Today</h5>
-                            </div>
-                            <div class="ps-3 ms-3">
                                 <h5 id="monthly_sales" >0.00 </h5>
-                                <h5 class="fw-bolder">Monthly</h5>
+                                <h5 class="fw-bolder">Monthly Sales</h5>
                             </div>
                             <div class="ps-3 ms-3">
-                                <h5 id="yearly_sales" >0.00 </h5>
-                                <h5 class="fw-bolder">Annual</h5>
+                                <h5 id="yearly" >0.00 </h5>
+                                <h5 class="fw-bolder">Annual Sales</h5>
                             </div>
                         </div>
                     </div>

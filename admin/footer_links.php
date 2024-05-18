@@ -38,4 +38,7 @@
     <script src="../javascript/data_tables.js"></script>
     <script src="../javascript/if_generate.js"></script>
     <script src="../javascript/today_sales.js"></script>
+    <script src="../javascript/monthly_sales.js"></script>
+    <script src="../javascript/user_logs.js"></script>
+    <script src="../javascript/accounts_list.js"></script>
     

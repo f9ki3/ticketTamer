@@ -15,14 +15,10 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 if ($requestMethod == 'POST' || $requestMethod == 'GET') {
     // SQL query
-    $sql = "SELECT 
-                DATE(ticket_date) AS ticket_date,
-                CAST(SUM(ticket_total_amount) AS DECIMAL(18, 2)) AS total_sales
-            FROM 
-                transaction
-            GROUP BY 
-                DATE(ticket_date);
-            ";
+    $sql = "SELECT SUM(ticket_total_amount) as monthly
+            FROM transaction 
+            WHERE MONTH(ticket_date) = MONTH(NOW()) 
+            AND YEAR(ticket_date) = YEAR(NOW());";
 
     $result = $conn->query($sql);
 
