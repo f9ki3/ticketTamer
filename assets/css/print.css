@@ -1,0 +1,7 @@
+@media print {
+
+    .navs, .summary, .generate{
+        display: none;
+    }
+
+  }

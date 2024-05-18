@@ -26,7 +26,7 @@
                 <div class="col-12 col-md-4">
                     <div class="shadow border mt-4 rounded rounded-4 p-4 pt-5" style="height: 170px">
                             <h5>Today Sales </h5>
-                            <h2 class="fw-bolder">PHP 10,00.00 </h2>
+                            <h2 id="today_sales" class="fw-bolder">PHP 0.00 </h2>
                     </div>
                 </div>
                 <div class="col-12 col-md-8">
@@ -40,15 +40,15 @@
                                 <h3 class="fw-bolder"><?php echo $fname, ' ', $lname;?></h3>
                             </div>
                             <div class="ps-4 ms-5 border-start">
-                                <h5>100 </h5>
+                                <h5 id="today_sales">0.00 </h5>
                                 <h5 class="fw-bolder">Today</h5>
                             </div>
                             <div class="ps-3 ms-3">
-                                <h5>100 </h5>
+                                <h5 id="monthly_sales" >0.00 </h5>
                                 <h5 class="fw-bolder">Monthly</h5>
                             </div>
                             <div class="ps-3 ms-3">
-                                <h5>100 </h5>
+                                <h5 id="yearly_sales" >0.00 </h5>
                                 <h5 class="fw-bolder">Annual</h5>
                             </div>
                         </div>

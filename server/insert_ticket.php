@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Prepare and execute the SQL select statement
         $stmt = $conn->prepare("SELECT * 
         FROM `transaction` t
-        JOIN `parking_type` o ON t.id = o.ticket_qr_code
+        JOIN `parking_type` o ON t.ticket_qr_code = o.id
         WHERE t.transaction_code = ?
         ");
         $stmt->bind_param("s", $transaction_code);
